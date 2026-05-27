@@ -272,7 +272,7 @@ function PlatformerGame({ onFW }: { onFW:(x:number,y:number)=>void }) {
   })
   const [displayScore, setDisplayScore] = useState(0)
   const [displayBest, setDisplayBest] = useState(0)
-  const [phase, setPhase] = useState<"idle"|"playing"|"over">("idle")
+  const [, setPhase] = useState<"idle"|"playing"|"over">("idle")
   const rafRef = useRef<number>(0)
   const containerRef = useRef<HTMLDivElement>(null)
   // scale factor for responsive display
@@ -471,9 +471,7 @@ function PlatformerGame({ onFW }: { onFW:(x:number,y:number)=>void }) {
     }
  
     // ── game loop ──
-    let lastTs = 0
-    const loop = (ts: number) => {
-      const dt = Math.min(ts - lastTs, 32); lastTs = ts
+    const loop = () => {
       const s = stateRef.current
  
       if (s.phase === "playing") {
