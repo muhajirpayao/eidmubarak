@@ -271,7 +271,7 @@ function FireworksCanvas({ triggerCount }: { triggerCount: number }) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const particlesRef = useRef<Particle[]>([])
   const rafRef = useRef<number>(0)
-  const counterRef = useRef(0)
+  
  
   const spawnBurst = useCallback((cx: number, cy: number) => {
     const count = 60
