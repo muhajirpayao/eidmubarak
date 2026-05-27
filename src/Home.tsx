@@ -119,7 +119,7 @@ const FIREWORK_COLORS = [
   "#ff6b6b", "#ffd93d", "#6bcb77", "#4d96ff",
 ]
 
-const SHEEP_EMOJIS = ["🐑", "🐑", "🐑", "🐑", "🐑"]
+// const SHEEP_EMOJIS = ["🐑", "🐑", "🐑", "🐑", "🐑"]
  
 function Star({ x, y, size, delay, duration }: StarProps) {
   return (
@@ -435,7 +435,7 @@ function SheepGame({ onFW }: { onFW: (x: number, y: number) => void }) {
   const gameAreaRef = useRef<HTMLDivElement>(null)
   const rafRef = useRef<number>(0)
   const lastTimeRef = useRef<number>(0)
-  const spawnTimerRef = useRef<number>(0)
+  // const spawnTimerRef = useRef<number>(0)
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const scoreRef = useRef(0)
   const levelRef = useRef(1)
@@ -575,7 +575,7 @@ function SheepGame({ onFW }: { onFW: (x: number, y: number) => void }) {
     }, 500)
   }, [addFloat, onFW])
 
-  const missedSheep = streak > 0
+  // const missedSheep = streak > 0
 
   return (
     <div style={{ width: "100%", marginTop: "0.5rem" }}>
